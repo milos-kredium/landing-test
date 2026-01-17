@@ -7,6 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+      
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      
+      .logo-scroll {
+        animation: scroll 30s linear infinite;
+      }
+      
+      .logo-scroll:hover {
+        animation-play-state: paused;
+      }
     </style>
   </head>
 
@@ -175,24 +192,46 @@
           <h2 class="text-sm font-semibold text-zinc-900">Trusted by teams building & selling top projects</h2>
           <span class="text-xs text-zinc-600">Partner logos</span>
         </div>
-        <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-          <div class="flex h-10 items-center justify-center rounded-xl bg-white p-2">
-            <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
-          </div>
-          <div class="flex h-10 items-center justify-center rounded-xl bg-white p-2">
-            <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
-          </div>
-          <div class="flex h-10 items-center justify-center rounded-xl bg-white p-2">
-            <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
-          </div>
-          <div class="flex h-10 items-center justify-center rounded-xl bg-white p-2">
-            <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
-          </div>
-          <div class="flex h-10 items-center justify-center rounded-xl bg-white p-2">
-            <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
-          </div>
-          <div class="flex h-10 items-center justify-center rounded-xl bg-white p-2">
-            <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+        <div class="mt-5 overflow-hidden">
+          <div class="logo-scroll flex gap-3">
+            <!-- First set of logos -->
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
+            <div class="flex h-10 min-w-[120px] items-center justify-center rounded-xl bg-white p-2">
+              <img src="./assets/Logo-horizaontal_color1.png" alt="Kredium Logo" class="h-full w-full object-contain" />
+            </div>
           </div>
         </div>
       </div>
