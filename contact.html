@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kredium — Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    </style>
+  </head>
+
+  <body class="bg-white text-zinc-900">
+    <!-- Mobile Drawer -->
+    <div id="drawer" class="fixed inset-0 z-[60] hidden">
+      <button
+        id="drawerBackdrop"
+        class="absolute inset-0 bg-black/30"
+        aria-label="Close menu backdrop"
+        type="button"
+      ></button>
+
+      <aside
+        class="absolute right-0 top-0 h-full w-[86%] max-w-sm border-l border-zinc-200 bg-white p-5"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile menu"
+      >
+        <div class="flex items-center justify-between">
+          <a href="./index.html" class="flex items-center gap-3">
+            <div class="grid h-9 w-9 place-items-center rounded-xl bg-emerald-50 text-emerald-800 font-semibold">K</div>
+            <div class="leading-tight">
+              <div class="text-xs text-zinc-500">Kredium</div>
+              <div class="text-sm font-semibold">Platform</div>
+            </div>
+          </a>
+
+          <button
+            id="closeDrawer"
+            class="rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-sm text-zinc-800 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-200"
+            aria-label="Close menu"
+            type="button"
+          >
+            ✕
+          </button>
+        </div>
+
+        <nav class="mt-6 space-y-2 text-sm">
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./index.html">
+            Home
+          </a>
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./crm.html">
+            CRM
+          </a>
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./interactive-map.html">
+            Interactive map
+          </a>
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./pricing.html">
+            Pricing
+          </a>
+          <a class="block rounded-2xl bg-emerald-600 px-4 py-3 text-white font-semibold hover:bg-emerald-700" href="./contact.html">
+            Contact
+          </a>
+        </nav>
+
+        <div class="mt-6 grid gap-2">
+          <a
+            class="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+            href="./login.html"
+          >
+            Log in
+          </a>
+          <a
+            class="rounded-2xl bg-emerald-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-emerald-700"
+            href="./signup.html"
+          >
+            Sign up
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="./index.html" class="flex items-center gap-3">
+          <div class="grid h-9 w-9 place-items-center rounded-xl bg-emerald-50 text-emerald-800 font-semibold">K</div>
+          <div class="leading-tight">
+            <div class="text-xs text-zinc-500">Kredium</div>
+            <div class="text-sm font-semibold">Platform</div>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
+          <a class="hover:text-zinc-900" href="./index.html">Home</a>
+          <a class="hover:text-zinc-900" href="./pricing.html">Pricing</a>
+          <a class="font-semibold text-emerald-700" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a class="hidden rounded-xl px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100 sm:inline-flex" href="./login.html">
+            Log in
+          </a>
+          <a class="hidden rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 sm:inline-flex" href="./signup.html">
+            Sign up
+          </a>
+
+          <button
+            id="openDrawer"
+            class="inline-flex rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-800 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-emerald-200 md:hidden"
+            aria-label="Open menu"
+            type="button"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="mx-auto max-w-6xl px-4 pt-10 pb-8 sm:pt-12">
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-xs text-emerald-800">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Contact Kredium
+          </p>
+
+          <h1 class="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+            Let’s talk about your workflow
+          </h1>
+          <p class="mt-4 text-base text-zinc-600 sm:text-lg">
+            Tell us what you need — CRM, interactive maps, broker tools, developer inventory — and we’ll respond fast.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-3xl border border-zinc-200 bg-white p-5">
+              <div class="text-sm font-semibold">Email</div>
+              <p class="mt-2 text-sm text-zinc-600">support@kredium.io</p>
+              <p class="mt-1 text-xs text-zinc-500">We reply within 24 hours</p>
+            </div>
+
+            <div class="rounded-3xl border border-zinc-200 bg-white p-5">
+              <div class="text-sm font-semibold">Business hours</div>
+              <p class="mt-2 text-sm text-zinc-600">Mon – Fri</p>
+              <p class="mt-1 text-xs text-zinc-500">10:00 – 18:00 (GST)</p>
+            </div>
+          </div>
+
+          <div class="mt-4 rounded-3xl border border-zinc-200 bg-gradient-to-r from-emerald-50 to-white p-5">
+            <div class="text-sm font-semibold">Need a fast demo?</div>
+            <p class="mt-2 text-sm text-zinc-600">
+              Share your preferred time and your role (Broker / Developer). We’ll prepare a clean demo based on your needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact form card -->
+        <div class="rounded-3xl border border-zinc-200 bg-white p-5 sm:p-7">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">Send a message</h2>
+            <span class="text-xs text-zinc-500">~ 60 sec</span>
+          </div>
+
+          <form class="mt-5 space-y-4" onsubmit="return false;">
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label class="text-sm font-medium text-zinc-800">Full name</label>
+                <input
+                  class="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label class="text-sm font-medium text-zinc-800">Email</label>
+                <input
+                  type="email"
+                  class="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
+                  placeholder="you@company.com"
+                />
+              </div>
+            </div>
+
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label class="text-sm font-medium text-zinc-800">Role</label>
+                <select
+                  class="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
+                >
+                  <option>Broker</option>
+                  <option>Developer</option>
+                  <option>Agency</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="text-sm font-medium text-zinc-800">Topic</label>
+                <select
+                  class="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
+                >
+                  <option>Request a demo</option>
+                  <option>Pricing</option>
+                  <option>Partnership</option>
+                  <option>Support</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="text-sm font-medium text-zinc-800">Message</label>
+              <textarea
+                rows="5"
+                class="mt-2 w-full resize-none rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
+                placeholder="Tell us what you're trying to achieve…"
+              ></textarea>
+              <p class="mt-2 text-xs text-zinc-500">
+                Example: “I’m a broker. I want fast project presentations + tracking leads by owner & pipeline.”
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <button
+                class="rounded-2xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-200"
+                type="submit"
+              >
+                Send message
+              </button>
+
+              <div class="text-xs text-zinc-500">
+                By sending, you agree to our <a href="#" class="text-emerald-700 hover:underline">privacy policy</a>.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ mini -->
+    <section class="mx-auto max-w-6xl px-4 pb-14">
+      <div class="rounded-3xl border border-zinc-200 bg-white p-6">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <h2 class="text-lg font-semibold">Quick questions</h2>
+          <span class="text-xs text-zinc-500">Before you send</span>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-sm font-semibold">How fast do you respond?</div>
+            <p class="mt-2 text-sm text-zinc-600">Usually within 24 hours on working days.</p>
+          </div>
+
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-sm font-semibold">Can I request a custom demo?</div>
+            <p class="mt-2 text-sm text-zinc-600">Yes — tell us your role + what you sell.</p>
+          </div>
+
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-sm font-semibold">Do you support UAE projects?</div>
+            <p class="mt-2 text-sm text-zinc-600">Yes, and we can also include global inventory.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+          <div>
+            <div class="text-sm font-semibold">Kredium</div>
+            <p class="mt-2 text-xs text-zinc-600">
+              All-in-one real estate platform for brokers & developers.
+            </p>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Pages</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="./index.html">Home</a>
+              <a class="block hover:text-zinc-900" href="./pricing.html">Pricing</a>
+              <a class="block hover:text-zinc-900" href="./contact.html">Contact</a>
+            </div>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Product</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="#">CRM</a>
+              <a class="block hover:text-zinc-900" href="#">Interactive map</a>
+              <a class="block hover:text-zinc-900" href="#">Sales tools</a>
+            </div>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Account</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="./login.html">Log in</a>
+              <a class="block hover:text-zinc-900" href="./signup.html">Sign up</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-xs text-zinc-500">
+          © <span id="year"></span> Kredium. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // drawer
+      const drawer = document.getElementById("drawer");
+      const openDrawer = document.getElementById("openDrawer");
+      const closeDrawer = document.getElementById("closeDrawer");
+      const drawerBackdrop = document.getElementById("drawerBackdrop");
+
+      function setDrawer(open) {
+        drawer.classList.toggle("hidden", !open);
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+
+      openDrawer?.addEventListener("click", () => setDrawer(true));
+      closeDrawer?.addEventListener("click", () => setDrawer(false));
+      drawerBackdrop?.addEventListener("click", () => setDrawer(false));
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setDrawer(false);
+      });
+    </script>
+  </body>
+</html>

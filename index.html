@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kredium — All-in-One Real Estate Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    </style>
+  </head>
+
+  <body class="bg-white text-zinc-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/70 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="/" class="flex items-center gap-3">
+          <div class="grid h-9 w-9 place-items-center rounded-xl bg-zinc-900 font-semibold text-white">K</div>
+          <div class="leading-tight">
+            <div class="text-xs text-zinc-600">Kredium</div>
+            <div class="text-sm font-semibold">Platform</div>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-zinc-700 md:flex">
+          <a class="hover:text-zinc-900" href="/crm">CRM</a>
+          <a class="hover:text-zinc-900" href="/interactive-map">Interactive map</a>
+          <a class="hover:text-zinc-900" href="/pricing">Pricing</a>
+          <a class="hover:text-zinc-900" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a class="hidden rounded-xl px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 sm:inline-flex" href="/login">
+            Log in
+          </a>
+          <a class="rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-800" href="#cta">
+            Sign up
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-6xl px-4 pt-12 pb-10">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Built for brokers & developers — UAE and beyond
+          </p>
+
+          <h1 class="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
+            The all-in-one real estate platform for brokers and developers
+          </h1>
+
+          <p class="mt-4 text-base text-zinc-700">
+            Sell faster with a single workspace for listings, leads, project marketing assets, booking links, and sales support.
+          </p>
+
+          <!-- Segment toggle -->
+          <div class="mt-6 inline-flex rounded-2xl border border-zinc-200 bg-zinc-100 p-1">
+            <button
+              id="tab-brokers"
+              class="rounded-xl px-4 py-2 text-sm font-semibold text-white bg-zinc-900"
+              type="button"
+            >
+              For Brokers
+            </button>
+            <button
+              id="tab-developers"
+              class="rounded-xl px-4 py-2 text-sm font-semibold text-zinc-700 hover:text-zinc-900"
+              type="button"
+            >
+              For Developers
+            </button>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a id="primary-cta" class="rounded-2xl bg-zinc-900 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-zinc-800" href="#cta">
+              Get started
+            </a>
+            <a class="rounded-2xl border border-zinc-200 bg-zinc-50 px-5 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-100" href="#how">
+              See how it works
+            </a>
+          </div>
+
+          <!-- Proof stats -->
+          <div class="mt-6 grid grid-cols-3 gap-3 text-xs text-zinc-600">
+            <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-3">
+              <div class="text-zinc-900 font-semibold">300+</div>
+              <div class="mt-1">Developers</div>
+            </div>
+            <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-3">
+              <div class="text-zinc-900 font-semibold">200+</div>
+              <div class="mt-1">Brokers</div>
+            </div>
+            <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-3">
+              <div class="text-zinc-900 font-semibold">UAE + Global</div>
+              <div class="mt-1">Exclusives</div>
+            </div>
+          </div>
+
+          <!-- Dynamic bullets -->
+          <ul id="hero-bullets" class="mt-6 space-y-2 text-sm text-zinc-700">
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Access exclusive projects instantly — no chasing developers.</li>
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Everything in one place: brochures, booking links, lead tracking.</li>
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Close deals anywhere with a global inventory + local presence.</li>
+          </ul>
+        </div>
+
+        <!-- Hero visual -->
+        <div class="rounded-3xl border border-zinc-200 bg-gradient-to-b from-zinc-50 to-transparent p-5">
+          <div class="rounded-2xl border border-zinc-200 bg-zinc-100 p-4">
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-semibold">Kredium Workspace</div>
+              <div class="text-xs text-zinc-600">Preview</div>
+            </div>
+
+            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+                <div class="text-xs text-zinc-600">Leads</div>
+                <div class="mt-1 text-sm font-semibold">Pipeline & owners</div>
+                <div class="mt-3 h-2 w-full rounded-full bg-zinc-200">
+                  <div class="h-2 w-2/3 rounded-full bg-emerald-500"></div>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+                <div class="text-xs text-zinc-600">Projects</div>
+                <div class="mt-1 text-sm font-semibold">Units & availability</div>
+                <div class="mt-3 flex gap-2">
+                  <span class="rounded-full bg-sky-100 px-2.5 py-1 text-xs font-medium text-sky-700">Ready</span>
+                  <span class="rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700">Off-plan</span>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-zinc-200 bg-white p-4 sm:col-span-2">
+                <div class="text-xs text-zinc-600">Quick actions</div>
+                <div class="mt-2 grid gap-2 sm:grid-cols-3">
+                  <button class="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-sm hover:bg-zinc-100">
+                    <div class="font-semibold">Get presentation</div>
+                    <div class="text-xs text-zinc-600">Send in seconds</div>
+                  </button>
+                  <button class="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-sm hover:bg-zinc-100">
+                    <div class="font-semibold">Booking link</div>
+                    <div class="text-xs text-zinc-600">Share instantly</div>
+                  </button>
+                  <button class="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-sm hover:bg-zinc-100">
+                    <div class="font-semibold">Track payout</div>
+                    <div class="text-xs text-zinc-600">Stay on top</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 rounded-2xl border border-zinc-200 bg-zinc-100 p-4">
+              <div class="text-xs text-zinc-600">Interactive map</div>
+              <div class="mt-1 text-sm font-semibold">Bring projects to life</div>
+              <p class="mt-2 text-xs text-zinc-600">
+                3D maps, unit details, floor plans, payment plans, panoramas — in one experience.
+              </p>
+              <a class="mt-3 inline-flex rounded-xl bg-zinc-900 px-4 py-2 text-xs font-semibold text-white hover:bg-zinc-800" href="/interactive-map">
+                View interactive map
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof logos -->
+    <section class="mx-auto max-w-6xl px-4 pb-12">
+      <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 class="text-sm font-semibold text-zinc-900">Trusted by teams building & selling top projects</h2>
+          <span class="text-xs text-zinc-600">Partner logos</span>
+        </div>
+        <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
+          <div class="h-10 rounded-xl bg-zinc-200"></div>
+          <div class="h-10 rounded-xl bg-zinc-200"></div>
+          <div class="h-10 rounded-xl bg-zinc-200"></div>
+          <div class="h-10 rounded-xl bg-zinc-200"></div>
+          <div class="h-10 rounded-xl bg-zinc-200"></div>
+          <div class="h-10 rounded-xl bg-zinc-200"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Benefits -->
+    <section class="mx-auto max-w-6xl px-4 pb-12">
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+          <div class="text-sm font-semibold">Frictionless sales flow</div>
+          <p class="mt-2 text-sm text-zinc-700">
+            Reduce back-and-forth with instant access to materials, links, and availability.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+          <div class="text-sm font-semibold">Smart pipeline control</div>
+          <p class="mt-2 text-sm text-zinc-700">
+            Track leads, owners, stages, and follow-ups in one place—no spreadsheets.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+          <div class="text-sm font-semibold">Fast presentation-ready</div>
+          <p class="mt-2 text-sm text-zinc-700">
+            Share a clean, consistent project story—interactive maps included.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mx-auto max-w-6xl px-4 pb-12">
+      <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 class="text-lg font-semibold">How it works</h2>
+          <span class="text-xs text-zinc-600">Simple 4-step flow</span>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-4">
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-xs text-zinc-600">1</div>
+            <div class="mt-1 text-sm font-semibold">Pick your role</div>
+            <p class="mt-2 text-xs text-zinc-600">Brokers sell faster. Developers showcase better.</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-xs text-zinc-600">2</div>
+            <div class="mt-1 text-sm font-semibold">Add inventory</div>
+            <p class="mt-2 text-xs text-zinc-600">Projects, units, assets, availability, pricing.</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-xs text-zinc-600">3</div>
+            <div class="mt-1 text-sm font-semibold">Share instantly</div>
+            <p class="mt-2 text-xs text-zinc-600">Presentations, booking links, interactive maps.</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-xs text-zinc-600">4</div>
+            <div class="mt-1 text-sm font-semibold">Track & close</div>
+            <p class="mt-2 text-xs text-zinc-600">Pipeline, owners, follow-ups, payouts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case study / proof -->
+    <section class="mx-auto max-w-6xl px-4 pb-12">
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 md:col-span-2">
+          <div class="text-xs text-zinc-600">Story</div>
+          <h3 class="mt-2 text-lg font-semibold">"We reduced time-to-share projects and improved lead handling."</h3>
+          <p class="mt-3 text-sm text-zinc-700">
+            Put one concrete story here: less friction, faster presentations, cleaner lead ownership, better conversion.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">Faster share</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-700">Cleaner pipeline</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700">Better follow-up</span>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+          <div class="text-sm font-semibold">Kredium by the numbers</div>
+          <div class="mt-4 space-y-3">
+            <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+              <div class="text-2xl font-semibold">300+</div>
+              <div class="mt-1 text-xs text-zinc-600">Developers onboarded</div>
+            </div>
+            <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+              <div class="text-2xl font-semibold">200+</div>
+              <div class="mt-1 text-xs text-zinc-600">Brokers using it daily</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Security -->
+    <section class="mx-auto max-w-6xl px-4 pb-12">
+      <div class="rounded-3xl border border-zinc-200 bg-zinc-50 p-6">
+        <h2 class="text-lg font-semibold">Trust & reliability built in</h2>
+        <p class="mt-2 text-sm text-zinc-700">
+          In real estate, trust UI is conversion UI. Make the platform feel safe, structured, and predictable.
+        </p>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-sm font-semibold">Access control</div>
+            <p class="mt-2 text-xs text-zinc-600">Roles, ownership, and clean handoffs across teams.</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-sm font-semibold">Data consistency</div>
+            <p class="mt-2 text-xs text-zinc-600">One source of truth for units, assets, and updates.</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-200 bg-white p-4">
+            <div class="text-sm font-semibold">Operational clarity</div>
+            <p class="mt-2 text-xs text-zinc-600">Track sales activity, follow-ups, and payouts in one place.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="mx-auto max-w-6xl px-4 pb-16">
+      <div class="rounded-3xl border border-zinc-200 bg-gradient-to-r from-zinc-50 to-transparent p-8">
+        <h2 class="text-2xl font-semibold">Bring your real estate sales performance to the next level</h2>
+        <p class="mt-2 max-w-2xl text-sm text-zinc-700">
+          Start with your role. Add inventory. Share instantly. Track & close.
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a class="rounded-2xl bg-zinc-900 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-zinc-800" href="/signup">
+            Sign up
+          </a>
+          <a class="rounded-2xl border border-zinc-200 bg-zinc-50 px-5 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-100" href="/interactive-map">
+            View live demo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <div class="grid gap-6 md:grid-cols-4">
+          <div>
+            <div class="text-sm font-semibold">Kredium</div>
+            <p class="mt-2 text-xs text-zinc-600">
+              All-in-one real estate platform for brokers & developers.
+            </p>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Product</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="/crm">CRM</a>
+              <a class="block hover:text-zinc-900" href="/interactive-map">Interactive map</a>
+              <a class="block hover:text-zinc-900" href="/pricing">Pricing</a>
+            </div>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Company</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="/terms-of-service">Terms</a>
+              <a class="block hover:text-zinc-900" href="/privacy-policy">Privacy</a>
+              <a class="block hover:text-zinc-900" href="./contact.html">Contact</a>
+            </div>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Get started</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="/signup">Create account</a>
+              <a class="block hover:text-zinc-900" href="/login">Log in</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-xs text-zinc-500">
+          © <span id="year"></span> Kredium. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const tabB = document.getElementById("tab-brokers");
+      const tabD = document.getElementById("tab-developers");
+      const bullets = document.getElementById("hero-bullets");
+      const cta = document.getElementById("primary-cta");
+
+      function setActive(which) {
+        const isBrokers = which === "brokers";
+
+        // button styles
+        tabB.className = isBrokers
+          ? "rounded-xl px-4 py-2 text-sm font-semibold text-white bg-zinc-900"
+          : "rounded-xl px-4 py-2 text-sm font-semibold text-zinc-700 hover:text-zinc-900";
+        tabD.className = !isBrokers
+          ? "rounded-xl px-4 py-2 text-sm font-semibold text-white bg-zinc-900"
+          : "rounded-xl px-4 py-2 text-sm font-semibold text-zinc-700 hover:text-zinc-900";
+
+        // content
+        if (isBrokers) {
+          bullets.innerHTML = `
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Access UAE & global exclusives — upsell instantly.</li>
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>One place for brochures, booking links, lead tracking.</li>
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Close deals faster with clear follow-ups and ownership.</li>
+          `;
+          cta.textContent = "Get started (Brokers)";
+          cta.setAttribute("href", "/signup?role=broker");
+        } else {
+          bullets.innerHTML = `
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Showcase projects with interactive maps and clean unit data.</li>
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Enable brokers with ready-to-share assets and booking links.</li>
+            <li class="flex gap-2"><span class="mt-1.5 h-2 w-2 rounded-full bg-zinc-400"></span>Reduce chaos: one source of truth for availability and updates.</li>
+          `;
+          cta.textContent = "Get started (Developers)";
+          cta.setAttribute("href", "/signup?role=developer");
+        }
+      }
+
+      tabB.addEventListener("click", () => setActive("brokers"));
+      tabD.addEventListener("click", () => setActive("developers"));
+    </script>
+  </body>
+</html>
