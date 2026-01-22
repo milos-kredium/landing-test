@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kredium — Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    </style>
+  </head>
+
+  <body class="bg-white text-zinc-900">
+    <!-- Mobile Drawer -->
+    <div id="drawer" class="fixed inset-0 z-[60] hidden">
+      <button
+        id="drawerBackdrop"
+        class="absolute inset-0 bg-black/30"
+        aria-label="Close menu backdrop"
+        type="button"
+      ></button>
+
+      <aside
+        class="absolute right-0 top-0 h-full w-[86%] max-w-sm border-l border-zinc-200 bg-white p-5"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile menu"
+      >
+        <div class="flex items-center justify-between">
+          <a href="./index.html" class="flex items-center gap-3">
+            <div class="grid h-9 w-9 place-items-center rounded-xl bg-zinc-900 font-semibold text-white">K</div>
+            <div class="leading-tight">
+              <div class="text-xs text-zinc-500">Kredium</div>
+              <div class="text-sm font-semibold">Platform</div>
+            </div>
+          </a>
+
+          <button
+            id="closeDrawer"
+            class="rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-sm text-zinc-800 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-200"
+            aria-label="Close menu"
+            type="button"
+          >
+            ✕
+          </button>
+        </div>
+
+        <nav class="mt-6 space-y-2 text-sm">
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./index.html">
+            Home
+          </a>
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./crm.html">
+            CRM
+          </a>
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./interactive-map.html">
+            Interactive map
+          </a>
+          <a class="block rounded-2xl bg-zinc-900 px-4 py-3 text-white font-semibold hover:bg-zinc-800" href="./pricing.html">
+            Pricing
+          </a>
+          <a class="block rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 hover:bg-zinc-100" href="./contact.html">
+            Contact
+          </a>
+        </nav>
+
+        <div class="mt-6 grid gap-2">
+          <a
+            class="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+            href="./login.html"
+          >
+            Log in
+          </a>
+          <a
+            class="rounded-2xl bg-zinc-900 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-zinc-800"
+            href="./signup.html"
+          >
+            Sign up
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="./index.html" class="flex items-center gap-3">
+          <div class="grid h-9 w-9 place-items-center rounded-xl bg-zinc-900 font-semibold text-white">K</div>
+          <div class="leading-tight">
+            <div class="text-xs text-zinc-500">Kredium</div>
+            <div class="text-sm font-semibold">Platform</div>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
+          <a class="hover:text-zinc-900" href="./index.html">Home</a>
+          <a class="font-semibold text-zinc-900" href="./pricing.html">Pricing</a>
+          <a class="hover:text-zinc-900" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a class="hidden rounded-xl px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100 sm:inline-flex" href="./login.html">
+            Log in
+          </a>
+          <a class="hidden rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-800 sm:inline-flex" href="./signup.html">
+            Sign up
+          </a>
+
+          <button
+            id="openDrawer"
+            class="inline-flex rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-800 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-200 md:hidden"
+            aria-label="Open menu"
+            type="button"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="mx-auto max-w-6xl px-4 pt-10 pb-8 sm:pt-12">
+      <div class="text-center">
+        <p class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
+          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+          Simple, transparent pricing
+        </p>
+
+        <h1 class="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+          Choose the plan that fits your workflow
+        </h1>
+        <p class="mt-4 mx-auto max-w-2xl text-base text-zinc-600 sm:text-lg">
+          Built for brokers and developers. Scale as you grow.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="mx-auto max-w-6xl px-4 pb-12">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Starter Plan -->
+        <div class="rounded-3xl border border-zinc-200 bg-white p-6">
+          <div class="text-sm font-semibold text-zinc-600">Starter</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <span class="text-4xl font-semibold">$99</span>
+            <span class="text-sm text-zinc-600">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-zinc-600">Perfect for individual brokers</p>
+
+          <a
+            href="./signup.html"
+            class="mt-6 block w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+          >
+            Get started
+          </a>
+
+          <div class="mt-6 space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Up to 50 active listings</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">CRM & lead tracking</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Interactive maps</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Booking links</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Email support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Plan (Featured) -->
+        <div class="rounded-3xl border-2 border-zinc-900 bg-zinc-900 p-6 text-white relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white">Most popular</span>
+          </div>
+          <div class="text-sm font-semibold text-zinc-300">Professional</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <span class="text-4xl font-semibold">$299</span>
+            <span class="text-sm text-zinc-300">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-zinc-300">For growing teams & agencies</p>
+
+          <a
+            href="./signup.html"
+            class="mt-6 block w-full rounded-2xl bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
+          >
+            Get started
+          </a>
+
+          <div class="mt-6 space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-400">✓</span>
+              <span class="text-sm text-zinc-200">Unlimited listings</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-400">✓</span>
+              <span class="text-sm text-zinc-200">Advanced CRM & pipeline</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-400">✓</span>
+              <span class="text-sm text-zinc-200">Custom interactive maps</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-400">✓</span>
+              <span class="text-sm text-zinc-200">Team collaboration (up to 5 users)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-400">✓</span>
+              <span class="text-sm text-zinc-200">Priority support</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-400">✓</span>
+              <span class="text-sm text-zinc-200">Analytics & reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="rounded-3xl border border-zinc-200 bg-white p-6">
+          <div class="text-sm font-semibold text-zinc-600">Enterprise</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <span class="text-4xl font-semibold">Custom</span>
+          </div>
+          <p class="mt-2 text-sm text-zinc-600">For developers & large teams</p>
+
+          <a
+            href="./contact.html"
+            class="mt-6 block w-full rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
+          >
+            Contact sales
+          </a>
+
+          <div class="mt-6 space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Everything in Professional</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Unlimited team members</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">White-label options</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">API access</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Dedicated account manager</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 text-emerald-600">✓</span>
+              <span class="text-sm text-zinc-700">Custom integrations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mx-auto max-w-6xl px-4 pb-14">
+      <div class="rounded-3xl border border-zinc-200 bg-white p-6">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <h2 class="text-lg font-semibold">Frequently asked questions</h2>
+          <span class="text-xs text-zinc-500">Pricing details</span>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+            <div class="text-sm font-semibold">Can I change plans later?</div>
+            <p class="mt-2 text-sm text-zinc-600">Yes, you can upgrade or downgrade at any time. Changes take effect immediately.</p>
+          </div>
+
+          <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+            <div class="text-sm font-semibold">Do you offer annual discounts?</div>
+            <p class="mt-2 text-sm text-zinc-600">Yes, annual plans include a 20% discount. Contact us for details.</p>
+          </div>
+
+          <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+            <div class="text-sm font-semibold">Is there a free trial?</div>
+            <p class="mt-2 text-sm text-zinc-600">Yes, all plans include a 14-day free trial. No credit card required.</p>
+          </div>
+
+          <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+            <div class="text-sm font-semibold">What payment methods do you accept?</div>
+            <p class="mt-2 text-sm text-zinc-600">We accept all major credit cards and bank transfers for Enterprise plans.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="mx-auto max-w-6xl px-4 pb-16">
+      <div class="rounded-3xl border border-zinc-200 bg-gradient-to-r from-zinc-50 to-white p-8 text-center">
+        <h2 class="text-2xl font-semibold">Ready to get started?</h2>
+        <p class="mt-2 mx-auto max-w-xl text-sm text-zinc-600">
+          Start your 14-day free trial today. No credit card required.
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <a class="rounded-2xl bg-zinc-900 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-zinc-800" href="./signup.html">
+            Start free trial
+          </a>
+          <a class="rounded-2xl border border-zinc-200 bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-900 hover:bg-zinc-50" href="./contact.html">
+            Contact sales
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+          <div>
+            <div class="text-sm font-semibold">Kredium</div>
+            <p class="mt-2 text-xs text-zinc-600">
+              All-in-one real estate platform for brokers & developers.
+            </p>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Product</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="./crm.html">CRM</a>
+              <a class="block hover:text-zinc-900" href="./interactive-map.html">Interactive map</a>
+              <a class="block hover:text-zinc-900" href="./pricing.html">Pricing</a>
+            </div>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Company</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="#">Terms</a>
+              <a class="block hover:text-zinc-900" href="#">Privacy</a>
+              <a class="block hover:text-zinc-900" href="./contact.html">Contact</a>
+            </div>
+          </div>
+
+          <div class="text-sm text-zinc-700">
+            <div class="font-semibold text-zinc-900">Account</div>
+            <div class="mt-3 space-y-2 text-sm">
+              <a class="block hover:text-zinc-900" href="./login.html">Log in</a>
+              <a class="block hover:text-zinc-900" href="./signup.html">Sign up</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-xs text-zinc-500">
+          © <span id="year"></span> Kredium. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // drawer
+      const drawer = document.getElementById("drawer");
+      const openDrawer = document.getElementById("openDrawer");
+      const closeDrawer = document.getElementById("closeDrawer");
+      const drawerBackdrop = document.getElementById("drawerBackdrop");
+
+      function setDrawer(open) {
+        drawer.classList.toggle("hidden", !open);
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+
+      openDrawer?.addEventListener("click", () => setDrawer(true));
+      closeDrawer?.addEventListener("click", () => setDrawer(false));
+      drawerBackdrop?.addEventListener("click", () => setDrawer(false));
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setDrawer(false);
+      });
+    </script>
+  </body>
+</html>
